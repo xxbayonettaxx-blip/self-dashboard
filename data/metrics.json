@@ -1,0 +1,44 @@
+[
+  {
+    "date": "2026-08-31",
+    "sleep_min": 390,
+    "fatigue_level": 1,
+    "work_min": 154
+  },
+  {
+    "date": "2026-09-01",
+    "sleep_min": 400,
+    "fatigue_level": 0,
+    "work_min": 206
+  },
+  {
+    "date": "2026-09-02",
+    "sleep_min": 410,
+    "fatigue_level": 0,
+    "work_min": 197
+  },
+  {
+    "date": "2026-09-03",
+    "sleep_min": 360,
+    "fatigue_level": 0,
+    "work_min": 198
+  },
+  {
+    "date": "2026-09-04",
+    "sleep_min": 420,
+    "fatigue_level": 0,
+    "work_min": 179
+  },
+  {
+    "date": "2026-09-05",
+    "sleep_min": 430,
+    "fatigue_level": 0,
+    "work_min": 190
+  },
+  {
+    "date": "2026-09-06",
+    "sleep_min": 410,
+    "fatigue_level": 0,
+    "work_min": 200
+  }
+]

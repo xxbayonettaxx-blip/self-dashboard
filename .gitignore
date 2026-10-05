@@ -1,0 +1,20 @@
+# 依存関係（環境依存のバイナリを含むためGit管理しない）
+node_modules/
+
+# データベースファイル（本番環境で自動生成・マイグレーションされるため除外）
+data/*.sqlite
+data/*.sqlite-wal
+data/*.sqlite-shm
+
+# OS固有のファイル
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ログファイル
+*.log
+npm-debug.log*
+
+# 環境変数・シークレット
+.env
+.env.*
