@@ -15,7 +15,9 @@ const fs = require('fs');
 const path = require('path');
 const Database = require('better-sqlite3');
 
-const PORT = 3000;
+// Nginx リバースプロキシ（127.0.0.1:3000）経由専用のため、既定はループバックのみ待ち受ける
+const HOST = process.env.HOST || '127.0.0.1';
+const PORT = Number(process.env.PORT) || 3000;
 const DB_FILE = path.join(__dirname, 'data', 'dashboard.sqlite');
 const LEGACY_JSON_FILE = path.join(__dirname, 'data', 'metrics.json');
 const PUBLIC_DIR = path.join(__dirname, 'public');
@@ -234,10 +236,10 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(PORT, () => {
+server.listen(PORT, HOST, () => {
   console.log(`====================================================`);
   console.log(`🚀 Self-Dashboard SQLiteサーバーが起動しました`);
-  console.log(`📡 URL: http://localhost:${PORT}`);
+  console.log(`📡 URL: http://${HOST}:${PORT}`);
   console.log(`💾 SQLite DB: ${DB_FILE}`);
   console.log(`⚡ WAL Mode: 有効 (journal_mode = WAL)`);
   console.log(`====================================================`);
